@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Custom filters - Jinja2</title>
+      <style type="text/css">
+         .main{
+         height: 300px;
+         width: 600px;
+         background-color: #33b5e5; 
+         margin: auto;
+         text-align: center;
+         vertical-align: middle;
+         font-size: 200%; 
+         border: 1px solid;
+         display: table-cell;
+         }
+         .wrapper{
+         margin: auto;
+         width: 602px;
+         }
+      </style>
+   </head>
+   <body style="background-color: #47473c; color: white">
+      <div class="wrapper">
+         <div class="main">
+			{# formating date using our custom filters #}
+            <p> Date(US format): {{ date | format_date_US }} </p>
+            <p> Date(EU format): {{ date | format_date_EU }} </p>
+         </div>
+      </div>
+   </body>
+</html>
